@@ -1,0 +1,14 @@
+<div class="container">
+<h1> Flats </h1>
+<ul>
+<% @flats.each do |flat| %>
+<li>
+<%= link_to flat.name, flat_path(flat) %>
+<%= link_to "Edit a flat", edit_flat_path(flat) %>
+<%= link_to "Delete a flat", flat_path(flat), method: :delete %>
+</li>
+<%end %>
+</ul>
+<%= link_to "Add a flat", new_flat_path %>
+</div>
+
